@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Form-v5 by Colorlib</title>
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- Font-->
+	<link rel="stylesheet" type="text/css" href="{% static 'ureg/css/roboto-font.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'ureg/fonts/font-awesome-5/css/fontawesome-all.min.css' %}">
+	<!-- Main Style Css -->
+    <link rel="stylesheet" href="{% static 'ureg/css/style.css' %}"/>
+</head>
+<body class="form-v5">
+	<div class="page-content">
+		<div class="form-v5-content">
+			<form class="form-detail" action="#" method="post">
+				{% csrf_token %}
+				<h2>Register Form</h2>
+				<div class="form-row">
+					<label for="vacancy no.">Vacancy No.</label>
+					<input type="text" name="vno" id="vacancy no." class="input-text"  value="{{vno}}" readonly>
+					<i class="fas fa-user"></i>
+				</div>
+					<div class="form-row">
+					<label for="vacancy name">Vacancy Name</label>
+					<input type="text" name="vname" id="vacancy name" class="input-text" placeholder="Vacancy Name" required>
+					<i class="fas fa-user"></i>
+				</div>
+
+
+					<div class="form-row">
+					<label for="no of post">No. of post</label>
+					<input type="text" name="nop" id="no of post" class="input-text" placeholder="No. of post" required>
+					<i class="fas fa-user"></i>
+				</div>
+				<div class="form-row">
+					<label for=salary>Salary</label>
+					<input type="number" name="slry" id="salary" class="input-text" placeholder="Salary" required pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}">
+					<i class="fas fa-envelope"></i>
+				</div>
+
+					<div class="form-row">
+					<label for="qualification">Qualification</label>
+					<select name="qual">
+						<option value="BCA">BCA</option>
+						<option value="MCA">MCA</option>
+						<option value="B.Com">B.COM</option>
+						<option value="MBA">MBA</option>
+						<option value="Btech CS">Btech CS</option>
+					</select>
+					<i class="fas fa-user"></i>
+				</div>
+
+				<div class="form-row">
+					<label for="vacancy name">Company Id</label>
+					<input type="text" name="cid"  class="input-text" value="{{cid}}" readonly>
+					<i class="fas fa-user"></i>
+				</div>
+				<div class="form-row">
+					<label for="vacancy name">Company Name</label>
+					<input type="text" name="cname"  class="input-text"  value="{{name}}" readonly>
+					<i class="fas fa-user"></i>
+				</div>
+				<div class="form-row-last">
+					<input type="submit" name="register" class="register" value="Register">
+				</div>
+
+
+			</form>
+		</div>
+	</div>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>
